@@ -14,18 +14,14 @@ function encontrarBitcoins(key, min, max){
     console.log('Buscando Bitcoins...')
 
     while(true){
-    
         key = key + um
-        
         pkey = key.toString(16)
         while (pkey.length < 64){
             pkey = '0' + pkey
         }
-    
-    
         if (Date.now() - startTime > segundos){
             segundos += 1000
-            console.log(segundos/1000);
+            //console.log(segundos/1000);
             if (segundos % 10000 == 0){
               console.log('Chaves buscadas: ', (key - min).toLocaleString('pt-BR'));    
               console.log('Ultima chave tentada: ',pkey )

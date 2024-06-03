@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "compose": "docker compose -f ./compose.yaml up -d --build",
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
